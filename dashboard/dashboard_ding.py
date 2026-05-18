@@ -189,7 +189,7 @@ def polutant_graph(df):
             ax.set_title("Kadar O3", loc="center", fontsize=15)
             st.pyplot(fig)
     
-ding_df = pd.read_csv("ding.csv")
+ding_df = pd.read_csv("dashboard/ding.csv")
 ding_df['date_time'] = pd.to_datetime(ding_df[['year', 'month', 'day']])
 ding_df.sort_values(by="date_time", inplace=True)
 ding_df.reset_index(inplace=True)
