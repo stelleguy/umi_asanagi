@@ -212,7 +212,7 @@ def temppres_graph(df):
 
 def deraws_graph(df):
     with st.container():
-        col1, col2 = st.columns(3)
+        col1, col2 = st.columns(2)
         with col1:
             fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
