@@ -31,5 +31,8 @@ conda activate main-ds
 pip install -r requirements.txt
 ```
 ```
+cd dashboard
+```
+```
 streamlit run dashboard_ding.py
 ```
