@@ -295,7 +295,7 @@ def scatterreg_graph(df):
             ax.set_title("Regression line visualization antara suhu dan tekanan angin tahun 2016 di Stasiun Dingling", fontsize=10)
             st.pyplot(fig)
 
-ding_df = pd.read_csv("ding_2016.csv")
+ding_df = pd.read_csv("dashboard/ding_2016.csv")
 ding_df['date_time'] = pd.to_datetime(ding_df[['year', 'month', 'day']])
 ding_df.sort_values(by="date_time", inplace=True)
 ding_df.reset_index(inplace=True)
