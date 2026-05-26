@@ -212,7 +212,7 @@ def temppres_graph(df):
 
 def deraws_graph(df):
     with st.container():
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(3)
         with col1:
             fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
@@ -240,20 +240,20 @@ def deraws_graph(df):
             ax.set_ylabel("RAIN (dalam mm/min)", fontsize=15)
             ax.set_title("Curah Hujan", loc="center", fontsize=15)
             st.pyplot(fig)
-
-        with col3:
-            fig, ax = plt.subplots(figsize=(15, 10))
-            ax.plot(
-                df['time'],
-                df['WSPM'],
-                marker='o',
-                linewidth=1,
-                color="#39064B")
-            ax.tick_params(axis='y', labelsize=10)
-            ax.tick_params(axis='x', labelsize=10)
-            ax.set_ylabel("WSPM (dalam m/s))", fontsize=15)
-            ax.set_title("Kecepatan angin", loc="center", fontsize=15)
-            st.pyplot(fig)
+            
+    with st.container():
+        fig, ax = plt.subplots(figsize=(15, 10))
+        ax.plot(
+            df['time'],
+            df['WSPM'],
+            marker='o',
+            linewidth=1,
+            color="#39064B")
+        ax.tick_params(axis='y', labelsize=10)
+        ax.tick_params(axis='x', labelsize=10)
+        ax.set_ylabel("WSPM (dalam m/s))", fontsize=15)
+        ax.set_title("Kecepatan angin", loc="center", fontsize=15)
+        st.pyplot(fig)
 
 def wdcount_graph(df):
     with st.container():
