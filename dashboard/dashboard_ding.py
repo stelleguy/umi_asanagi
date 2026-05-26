@@ -90,7 +90,7 @@ def polutant_display_lain(df):
 
 def polutant_graph_pm25(df):
     with st.container():
-        fig, ax = plt.subplots(figsize=(10, 5))
+        fig, ax = plt.subplots(figsize=(15, 10))
         ax.plot(
             df['time'],
             df['PM2.5'],
@@ -105,7 +105,7 @@ def polutant_graph_pm25(df):
 
 def polutant_graph_pm10(df):
     with st.container():
-        fig, ax = plt.subplots(figsize=(10, 5))
+        fig, ax = plt.subplots(figsize=(15, 10))
         ax.plot(
             df['time'],
             df['PM10'],
@@ -122,7 +122,7 @@ def polutant_graph_lain(df):
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'], 
                 df['SO2'], 
@@ -136,7 +136,7 @@ def polutant_graph_lain(df):
             st.pyplot(fig)
             
         with col2:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'], 
                 df['NO2'], 
@@ -152,7 +152,7 @@ def polutant_graph_lain(df):
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'], 
                 df['CO'],
@@ -166,7 +166,7 @@ def polutant_graph_lain(df):
             st.pyplot(fig)
             
         with col2:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'], 
                 df['O3'], 
@@ -183,7 +183,7 @@ def temppres_graph(df):
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'],
                 df['TEMP'],
@@ -197,7 +197,7 @@ def temppres_graph(df):
             st.pyplot(fig)
 
         with col2:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'],
                 df['PRES'],
@@ -214,7 +214,7 @@ def deraws_graph(df):
     with st.container():
         col1, col2, col3 = st.columns(3)
         with col1:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'],
                 df['DEWP'],
@@ -228,7 +228,7 @@ def deraws_graph(df):
             st.pyplot(fig)
 
         with col2:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'],
                 df['RAIN'],
@@ -242,7 +242,7 @@ def deraws_graph(df):
             st.pyplot(fig)
 
         with col3:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.plot(
                 df['time'],
                 df['WSPM'],
@@ -257,7 +257,7 @@ def deraws_graph(df):
 
 def wdcount_graph(df):
     with st.container():
-        fig, ax = plt.subplots(figsize=(10, 5))
+        fig, ax = plt.subplots(figsize=(15, 10))
         sns.countplot(
             x = "wd",
             data = df,
@@ -272,7 +272,7 @@ def scatterreg_graph(df):
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             ax.scatter(
                 df['TEMP'],
                 df['PRES'],
@@ -284,7 +284,7 @@ def scatterreg_graph(df):
             )
             st.pyplot(fig)
         with col2:
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(15, 10))
             sns.regplot(
                 x = "TEMP",
                 y = 'PRES',
